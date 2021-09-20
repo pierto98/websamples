@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de jugos</title>
+    <style>
+        * {
+            color: white;
+        }
+
+        body,
+        body>div {
+            margin: 0px;
+            padding: 0px;
+            background-color:sienna;
+        }
+
+        a {
+            margin-left: 6px;
+            margin-right: 6px;
+            vertical-align: bottom;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover,
+        a:active,
+        a:target {
+            border-bottom-color: red;
+        }
+
+        nav {}
+
+        nav * {
+            font-size: small;
+        }
+
+        div img {
+            vertical-align: middle;
+        }
+
+        a img {
+            vertical-align: text-bottom;
+        }
+
+        /*links páginas grupo*/
+        nav>div:first-child {
+            background-color: #44312b;
+            display: flex;
+        }
+
+        /*links páginas grupos defecto*/
+        nav>div:first-child>div {
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 20%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*links páginas grupos links*/
+        nav>div:first-child>div>div {
+            border-right: 2px groove #74615b;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        nav>div:first-child>div>div:last-child {
+            border: 0px none;
+        }
+
+        /*links páginas grupos margen*/
+        nav>div:first-child>div:first-child,
+        nav>div:first-child>div:last-child {
+            flex: 1 1 40%;
+        }
+
+        /*links páginas grupo saludo*/
+        nav>div:first-child>div:last-child {
+            text-align: center;
+        }
+
+        nav>div:first-child>div>div * {}
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <nav>
+                <!-- links páginas -->
+                <div>
+                    <div></div>
+                    <div>
+                        <div><a id="galeria" href="#galeria">Galería</a></div>
+                        <div><a id="equipo" href="#equipo">Equipo</a></div>
+                        <div><a id="valores" href="#valores">Valores</a></div>
+                        <div><a id="empresa" href="#empresa">Empresa</a></div>
+                        <div><a id="faq" href="#faq">FAQ</a></div>
+                    </div>
+                    <div>Un placer saludarle nuevamente</div>
+                </div>
+                <!-- links búsqueda -->
+                <div>
+                    <div>
+                        <img src="imgs/kanata-img.gif" alt="Kanata" />
+                        Bebidas desintoxicantes de Bogotá
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <a href="#phone"><img src="imgs/kanata-phone.gif" alt="contacto" />
+                                    contáctenos en 222-22-22</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div><a href="#inventario"><img src="imgs/kanata-form.gif" alt="inventario" />
+                                    dirección de bodega</a></div>
+                        </div>
+                        <div>
+                            <div>
+                                <label>
+                                    <img src="imgs/kanata-search.gif" alt="Buscar" />
+                                    <input type="text" placeholder="Consultar">
+                                </label>
+                                <button>OK</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p><a href="#cansta">
+                                    <img src="imgs/kanata_canasta.gif" alt="Canasta" />
+                                    Canasta</a></p>
+                            <p>Canasta vacía</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- links categorías -->
+                <div>
+                    <!-- links productos -->
+                    <div>
+                        <div>
+                            <div>
+                                <a href="#galeria"><img src="imgs/kanata_begin.gif" alt="Inicio" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div><a id="dulce" href="#dulce">Jugos con azucar</a></div>
+                        </div>
+                        <div>
+                            <div><a id="natural" href="#natural">Jugos sin endulzar</a></div>
+                        </div>
+                        <div>
+                            <div><a id="infusion" href="#infusion">Infusiones</a></div>
+                        </div>
+                        <div>
+                            <div><a id="bodega" href="#bodega">Bodega</a></div>
+                        </div>
+                        <div>
+                            <div><a id="granos" href="#granos">Granos</a></div>
+                        </div>
+                    </div>
+                    <!-- links destacados -->
+                    <div>
+                        <div>
+                            <div>
+                                <a id="productores" href="#productores">Productores</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <a id="ambientacion" href="#ambientacion">Ambientación</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <a id="promociones" href="#promociones">Promociones</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </form>
+        <section>
+            <!-- producto principal -->
+            <div>
+                <div>
+                    <div>
+                        <p>Arándanos rojos</p>
+                    </div>
+                    <div><img src="imgs/kanata-imgb1.gif" alt="Arándanos rojos" /></div>
+                    <div>
+                        <ul>
+                            <li><a id="info" href="#info">Más información</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- productos adicionales -->
+            <div>
+                <div>
+                    <div>
+                        <a id="img1" href="#img1"><img src="imgs/kanata-img1.jpg" alt="Imagen 1" title="Imagen 1" /></a>
+                    </div>
+                    <div>
+                        <a id="img2" href="#img2"><img src="imgs/kanata-img2.jpg" alt="Imagen 2" title="Imagen 2" /></a>
+                    </div>
+                    <div>
+                        <a id="img3" href="#img3"><img src="imgs/kanata-img3.jpg" alt="Imagen 3" title="Imagen 3" /></a>
+                    </div>
+                    <div>
+                        <a id="img4" href="#galeria"><img src="imgs/kanata-imgb.jpg" alt="Arándanos rojos"
+                                title="Arándanos rojos" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
