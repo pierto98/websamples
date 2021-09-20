@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de jugos</title>
+    <style>
+        * {
+            color: white;
+        }
+
+        body,
+        body>div {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            margin-left: 6px;
+            margin-right: 6px;
+            vertical-align: bottom;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover,
+        a:active,
+        a:target {
+            border-bottom-color: red;
+        }
+
+        nav {}
+
+        nav * {
+            font-size: small;
+        }
+
+        div img {
+            vertical-align: middle;
+        }
+
+        a img {
+            vertical-align: text-bottom;
+        }
+
+        /*links páginas grupo*/
+        nav>div:first-child {
+            background-color: #44312b;
+            display: flex;
+        }
+
+        /*links páginas grupos defecto*/
+        nav>div:first-child>div {
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 20%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*links páginas grupos links*/
+        nav>div:first-child>div>div {
+            border-right: 2px groove #74615b;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        nav>div:first-child>div>div:last-child {
+            border: 0px none;
+        }
+
+        /*links páginas grupos margen*/
+        nav>div:first-child>div:first-child,
+        nav>div:first-child>div:last-child {
+            flex: 1 1 40%;
+        }
+
+        /*links páginas grupo saludo*/
+        nav>div:first-child>div:last-child {
+            text-align: center;
+        }
+
+        nav>div:first-child>div>div * {}
+
+        /*links central grupo*/
+        nav>div:nth-child(2),
+        nav>div:last-child {
+            background-image: url(imgs/kanata_hb.jpg);
+            background-repeat: repeat;
+            display: flex;
+            width: 100%;
+        }
+
+        /*links central grupos*/
+        nav>div:nth-child(2)>div {
+            flex: 1 1 60%;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+        }
+
+        /*logo*/
+        nav>div:nth-child(2)>div>img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        nav>div:nth-child(2)>div:first-child,
+        nav>div:nth-child(2)>div:last-child {
+            flex: 1 1 20%;
+        }
+
+        nav>div:nth-child(2)>div:first-child {
+            padding-left: 50px;
+            padding-right: 10px;
+        }
+
+        nav>div:nth-child(2)>div:last-child {
+            padding-left: 10px;
+            padding-right: 50px;
+        }
+
+        /*búsquedas links grupo*/
+        nav>div:nth-child(2)>div:nth-child(2) {
+            display: flex;
+            justify-content: space-around;
+            vertical-align: middle;
+            flex-wrap: wrap;
+        }
+
+        /*búsquedas - links - texto - botón - grupos*/
+        nav>div:nth-child(2)>div:nth-child(2)>div {
+            flex: 1 1 20%;
+            /*ancho defecto de links y texto*/
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /*centrado vertical de columna*/
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /*búsquedas grupo*/
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child {}
+
+        /*búsquedas - links - grupos link*/
+        nav>div:nth-child(2)>div:nth-child(2)>div>div {
+            display: flex;
+            justify-content: center;
+            /*centrado horizontal de links*/
+        }
+
+        /* búsquedas - texto - boton - grupo */
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child>div {
+            border: 1px solid white;
+            border-radius: 2px;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0 auto;
+            /*centrado verticalmente*/
+        }
+
+        /*búsquedas - texto - botón - elementos*/
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child label {
+            border-width: 1px 0px 1px 1px;
+            border-color: lightgray;
+            border-style: ridge;
+            background-color: white;
+            padding-left: 6px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child label img {
+            vertical-align: text-top;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child input[type="text"],
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child label>input[type="text"],
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child input[type="text"]:focus,
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child label>input[type="text"]:focus,
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child input[type="text"]:focus-visible,
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child label>input[type="text"]:focus-visible {
+            flex: 1 1 auto;
+            background-color: transparent;
+            border: 0px none;
+            margin: 2px 0px 2px 2px;
+            outline: none;
+            padding: 0px;
+            color: darkgray;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child input[type="submit"],
+        nav>div:nth-child(2)>div:nth-child(2)>div:last-child button {
+            background-color: #cc0000;
+            border: 0px none;
+            font-size: x-small;
+            font-weight: bold;
+        }
+
+        /*canasta*/
+        nav>div:nth-child(2)>div:last-child>div {
+            background-image: url(imgs/kanata-nh.jpg);
+            background-repeat: no-repeat;
+            width: 140px;
+            height: 74px;
+            padding-top: 1px;
+        }
+
+        /*categorías - adiciones de links página*/
+        nav>div:last-child {
+            background-position-y: 120px;
+            border-top: 2px groove #74615b;
+            justify-content: center;
+            /*centrado horizontal de flex*/
+            /*centrado horizontal de categorías*/
+        }
+
+        /*categorías grupos*/
+        nav>div:last-child>div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /*categorías grupos links*/
+        nav>div:last-child>div>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /*links en columnas centrados verticalmente*/
+            border-right: 2px groove #74615b;
+        }
+
+        /*categorías grupos link grupo derecha*/
+        nav>div:last-child>div:last-child>div:last-child {
+            border-right: 0px none;
+        }
+
+        /*categorías - grupos - links - grupos*/
+        nav>div:last-child>div>div>div {
+            flex: 1 1 20px;
+        }
+
+        nav>div:last-child a {
+            white-space: nowrap;
+            padding: 3px;
+        }
+
+        /*links categorías grupos*/
+        nav>div:last-child>div:first-child {}
+
+        /*links categorías promos*/
+        nav>div:last-child>div:last-child {
+            background-color: rgba(161, 88, 61, 0.8);
+        }
+
+        /*productos*/
+        section {
+            background-image: url(imgs/kanata_imb.gif);
+            background-repeat: repeat;
+            padding: 10px;
+            height: fit-content;
+        }
+
+        /*producto principal*/
+        section>div:first-child {
+            text-align: center;
+        }
+
+        section>div:first-child>div {
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        /*producto principal - grupos*/
+        section>div:first-child>div>div {
+            position: absolute;
+        }
+
+        /*titulo producto principal*/
+        section>div:first-child>div>div:first-child {
+            background-image: url(imgs/kanata-high.gif);
+            background-repeat: no-repeat;
+            width: 132px;
+            height: 139px;
+            left: 0px;
+            top: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /*elementos titulo producto principal*/
+        section>div:first-child>div>div:first-child * {}
+
+        /*imagen producto principal*/
+        section>div:first-child>div>div:nth-child(2) {}
+
+        @media screen and (min-width: 1281px) {
+            section>div:first-child>div>div:nth-child(2) {
+                left: 12%;
+            }
+        }
+
+        @media screen and (min-width: 801px) and (max-width:1280px) {
+            section>div:first-child>div>div:nth-child(2) {}
+
+        }
+
+        @media screen and (max-width:1280px) {
+            section>div:first-child>div>div:nth-child(2) {
+                left: 20%;
+                /*width: 80%;*/
+            }
+        }
+
+        /*elementos imagen producto principal*/
+        section>div:first-child>div>div:nth-child(2) img {
+            width: 100%;
+        }
+
+        /*más información producto principal - grupo*/
+        section>div:first-child>div>div:last-child {
+            right: 20px;
+            top: 190px;
+        }
+
+        /*más información producto principal - elementos*/
+        section ul {
+            background-color: #e81120;
+            list-style-type: disclosure-closed;
+            list-style-position: inside;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+
+        /*productos adicionales*/
+        section>div:last-child {
+            text-align: center;
+            margin-top: 250px;
+        }
+
+        /*productos adicionales grupo*/
+        section>div:last-child>div {
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /*productos adicionales grupos*/
+        section>div:last-child>div>div {
+            border: 2px solid white;
+            border-radius: 2px;
+            margin: 10px;
+        }
+
+        section>div:last-child>div>div:target,
+        section>div:last-child>div>div:last-child {
+            border-color: rgba(161, 88, 61, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <nav>
+                <!-- links páginas -->
+                <div>
+                    <div></div>
+                    <div>
+                        <div><a id="galeria" href="#galeria">Galería</a></div>
+                        <div><a id="equipo" href="#equipo">Equipo</a></div>
+                        <div><a id="valores" href="#valores">Valores</a></div>
+                        <div><a id="empresa" href="#empresa">Empresa</a></div>
+                        <div><a id="faq" href="#faq">FAQ</a></div>
+                    </div>
+                    <div>Un placer saludarle nuevamente</div>
+                </div>
+                <!-- links búsqueda -->
+                <div>
+                    <div>
+                        <img src="imgs/kanata-img.gif" alt="Kanata" />
+                        Bebidas desintoxicantes de Bogotá
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <a href="#phone"><img src="imgs/kanata-phone.gif" alt="contacto" />
+                                    contáctenos en 222-22-22</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div><a href="#inventario"><img src="imgs/kanata-form.gif" alt="inventario" />
+                                    dirección de bodega</a></div>
+                        </div>
+                        <div>
+                            <div>
+                                <label>
+                                    <img src="imgs/kanata-search.gif" alt="Buscar" />
+                                    <input type="text" placeholder="Consultar">
+                                </label>
+                                <button>OK</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p><a href="#cansta">
+                                    <img src="imgs/kanata_canasta.gif" alt="Canasta" />
+                                    Canasta</a></p>
+                            <p>Canasta vacía</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- links categorías -->
+                <div>
+                    <!-- links productos -->
+                    <div>
+                        <div>
+                            <div>
+                                <a href="#galeria"><img src="imgs/kanata_begin.gif" alt="Inicio" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div><a id="dulce" href="#dulce">Jugos con azucar</a></div>
+                        </div>
+                        <div>
+                            <div><a id="natural" href="#natural">Jugos sin endulzar</a></div>
+                        </div>
+                        <div>
+                            <div><a id="infusion" href="#infusion">Infusiones</a></div>
+                        </div>
+                        <div>
+                            <div><a id="bodega" href="#bodega">Bodega</a></div>
+                        </div>
+                        <div>
+                            <div><a id="granos" href="#granos">Granos</a></div>
+                        </div>
+                    </div>
+                    <!-- links destacados -->
+                    <div>
+                        <div>
+                            <div>
+                                <a id="productores" href="#productores">Productores</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <a id="ambientacion" href="#ambientacion">Ambientación</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <a id="promociones" href="#promociones">Promociones</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </form>
+        <section>
+            <!-- producto principal -->
+            <div>
+                <div>
+                    <div>
+                        <p>Arándanos rojos</p>
+                    </div>
+                    <div><img src="imgs/kanata-imgb1.gif" alt="Arándanos rojos" /></div>
+                    <div>
+                        <ul>
+                            <li><a id="info" href="#info">Más información</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- productos adicionales -->
+            <div>
+                <div>
+                    <div>
+                        <a id="img1" href="#img1"><img src="imgs/kanata-img1.jpg" alt="Imagen 1" title="Imagen 1" /></a>
+                    </div>
+                    <div>
+                        <a id="img2" href="#img2"><img src="imgs/kanata-img2.jpg" alt="Imagen 2" title="Imagen 2" /></a>
+                    </div>
+                    <div>
+                        <a id="img3" href="#img3"><img src="imgs/kanata-img3.jpg" alt="Imagen 3" title="Imagen 3" /></a>
+                    </div>
+                    <div>
+                        <a id="img4" href="#galeria"><img src="imgs/kanata-imgb.jpg" alt="Arándanos rojos"
+                                title="Arándanos rojos" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
