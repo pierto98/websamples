@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adición de los elementos HTML</title>
+    <style>
+        * {
+            background-color: deepskyblue;
+        }
+        em{
+            font-weight: bold;
+        }
+        em:after{
+            content: "/";
+        }
+        ul:before{
+            font-weight:bold;
+            font-style: italic;
+            content: "<ul>-párrafo/";
+        }
+        body,
+        .listas {
+            background-color: navajowhite;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .izquierda {
+            float: left;
+        }
+
+        .derecha {
+            float: right;
+        }
+
+        .listas {
+            width: 100%;
+            height: 317px;
+        }
+
+        .central {
+            position: absolute;
+            left: 40%;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .esquinera {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <span><em>&lt;span&gt;-línea</em>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+    <span><em>&lt;span&gt;-línea</em>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+    <img src="../html/images/web_846e3e44f1c13729d7e0b31.jpg" width="50" alt="línea width=50" />
+    <img src="../html/images/web_846e3e44f1c13729d7e0b31.jpg" width="40" alt="línea width=40" />
+    <p><em>&lt;p&gt;-párrafo</em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ab quae expedita. Aliquid
+        optio cum illo facilis
+        quod tenetur in fugit aliquam. Itaque, tempora aut distinctio aliquam at atque neque.</p>
+    <div><em>&lt;div&gt;-párrafo</em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti commodi
+        repudiandae sapiente optio
+        rem rerum quisquam necessitatibus, praesentium harum tenetur blanditiis laudantium, placeat ab veritatis fugiat
+        iste assumenda voluptates?</div>
+    <span><em>&lt;span&gt;-línea</em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut alias esse numquam
+        voluptates non quasi omnis
+        suscipit maiores quae molestias obcaecati neque sint, aut, velit voluptatem reiciendis quam. Quod,
+        reprehenderit.</span>
+    <span><em>&lt;span&gt;-línea</em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illum dolores
+        consectetur sint eligendi quia,
+        minus explicabo, dicta corrupti id voluptatibus mollitia, dolorem rerum ratione expedita laboriosam possimus
+        voluptates provident?</span>
+    <ul>
+        <li>párrafo</li>
+        <li>lista</li>
+        <li>elementos</li>
+        <li>elemento 4</li>
+        <li>elemento 5</li>
+        <li>elemento 6</li>
+    </ul>
+    <div class="listas">
+        <div><em>&lt;div&gt-párrafo</em>estilos de ubicación</div>
+        <ul class="izquierda">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>izquierda</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+        <ul class="izquierda">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>izquierda</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+        <ul class="izquierda">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>izquierda</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+        <ul class="derecha">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>derecha</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+        <ul class="derecha">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>derecha</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+        <ul class="derecha">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>derecha</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+        <ul class="central">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>coordenadas</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+        <ul class="esquinera">
+            <li>ubicación</li>
+            <li>lista</li>
+            <li>elementos</li>
+            <li>coordenadas</li>
+            <li>elemento 5</li>
+            <li>elemento 6</li>
+        </ul>
+    </div>
+</body>
+
+</html>
